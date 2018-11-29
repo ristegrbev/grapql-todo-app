@@ -25,7 +25,6 @@ import java.util.Map;
 public class TodoGraphQLController {
 
     private static final String QUERY = "query";
-    private static final String VARIABLES = "variables";
     private static final String OPERATION_NAME = "operationName";
 
     private GraphQL graphQL;
@@ -44,13 +43,6 @@ public class TodoGraphQLController {
     public Map<String, Object> post(@RequestBody Map<String, Object> request, HttpServletRequest raw) {
         String query = request.get(QUERY).toString();
         String operationName = request.get(OPERATION_NAME) != null ? request.get(OPERATION_NAME).toString() : null;
-//        Object variablesValue = request.get(VARIABLES).toString();
-//
-//        Map<String, Object> variables = null;
-//        if (!StringUtils.isEmpty(variablesValue)) {
-//            variables = (Map<String, Object>) request.getOrDefault(VARIABLES, Collections.emptyMap());
-//        }
-
         return graphQL.execute(
                 ExecutionInput
                         .newExecutionInput()
