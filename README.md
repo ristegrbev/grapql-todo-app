@@ -1,4 +1,4 @@
-# Todo App with Spring Boot, GraphQL, and Angular 7
+# Simple Todo App with Spring Boot, GraphQL, and Angular 7
 This is a simple Todo app, the main features are to create `Todo`, list all `Todo`s and change the status.
 
 #
